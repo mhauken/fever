@@ -1,0 +1,224 @@
+/* help */
+#inline-help
+{
+	display: none;
+}
+
+#help-container
+{
+	display: none;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#help
+{
+	position: fixed;
+	z-index: 1000;
+	border: none;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	opacity: 0.9;
+	color: #FFF;
+	background-color: #333;
+	text-shadow: 0 0 0 #000;
+	-moz-text-shadow: 0 0 0 #000;
+	width: 224px;
+	padding: 8px 10px;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+#help-dangle
+{
+	position: fixed;
+	width: 21px;
+	height: 48px;
+	background: url(images/bg-help.png) 8px 8px no-repeat;
+}
+
+#help dt
+{
+	font-weight: bold;
+}
+
+#help dt em
+{
+	color: #BBB;
+	font-weight: normal;
+	font-style: normal;
+}
+
+#help code
+{
+	background-color: transparent;
+}
+
+/* dialogs */
+#dialog-container
+{
+	display: none;
+	position: fixed;
+	z-index: 500;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(35,42,50, 0.8);
+}
+
+#dialog-window
+{
+	margin: 20% auto 0;
+	max-width: 500px;
+}
+
+#dialog
+{
+	padding: 22px 0 0;
+	position: relative;
+}
+
+#dialog h1,
+#dialog form
+{
+	background: #fff;
+}
+
+#dialog h1
+{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	padding: 0 8px 4px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	line-height: 30px;
+	font-size: 12px;
+	color: #FFF;
+	text-shadow: 0 0 0 #000;
+	-moz-text-shadow: 0 0 0 #000;
+	background: none;
+}
+
+
+
+
+#dialog form.tabbed h1
+{
+	padding-bottom: 26px;
+}
+
+#dialog form.tabbed div.btn-row fieldset
+{
+	text-align: right;
+}
+
+#dialog ul.tabs
+{
+	position: absolute;
+	top: -8px;
+	left: 0px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#dialog ul.tabs li,
+#dialog ul.tabs li a
+{
+	color: #fff;
+}
+
+#dialog ul.tabs li
+{
+	display: block;
+	float: left;
+	padding: 4px 0 0 12px;
+	margin: 0 -2px 0 -4px;
+}
+
+#dialog ul.tabs li a
+{
+	display: block;
+	height: 26px;
+	line-height: 22px;
+	padding-right: 12px;
+	background-position: 100% 0;
+	color: #fff;
+	padding-left: 8px;
+}
+
+#dialog ul.tabs li a .btn.help
+{
+	margin: 0 -4px 0 0;
+}
+
+#dialog ul.tabs li.active a
+{
+	z-index: 100;
+	background: #fff;
+	color: $feed-menu-link;
+}
+
+
+#dialog div.tab
+{
+	display: none;
+}
+
+#dialog div.tab.active
+{
+	display: block;
+}
+
+#dialog div.tab h2
+{
+	display: none;
+}
+
+#dialog fieldset
+{
+	position: relative;
+	z-index: 1;
+	border: 0;
+	text-align: left;
+}
+
+
+
+#dialog h2
+{
+	color: #666;
+	padding: 4px 5px 2px;
+	background-position: 0 -985px;
+}
+
+#dialog p
+{
+	padding: 4px 5px;
+}
+
+.onloader
+{
+	position: absolute;
+	top: 0;
+	width: 0;
+	height: 0;
+}
+
+#top
+{
+	position: absolute;
+	top: 0;
+}
+
+td label{
+	display: block;
+}

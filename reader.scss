@@ -1,0 +1,63 @@
+/* Colors. Change if you want another color-scheme */
+
+$fever-red: #c1382b;
+$feed-menu-bg: #232a32;
+$feed-menu-link: #7e909d;
+$main-menu-bg: #212429;
+$feeds-read-indication: #616161;
+
+$main-fontstack: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontstack-in-feed-content: Azuro, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@import 'scss/vars';
+@import 'scss/shared';
+@import 'scss/buttons';
+@import 'scss/icons';
+@import 'scss/help-and-dialog';
+@import 'scss/alphabet';
+@import 'scss/main-menu';
+@import 'scss/feeds-menu';
+@import 'scss/content';
+@import 'scss/hot';
+@import 'scss/typo';
+@import 'scss/animation';
+@import 'scss/hacks';
+@import 'scss/main-positioning';
+
+/**/
+/**/
+/* Put in you own preferences here.. */
+/**/
+/**/
+
+
+/* I'm using Axuro as my font in the feeds*/
+
+@font-face {
+	font-family: Azuro;
+	src: url("Azuro/azuro-regular.eot?ie"),
+	url("Azuro/azuro-regular.woff");
+}
+@font-face {
+	font-family: Azuro;
+	src: url("Azuro/azuro-italic.eot?ie"),
+	url("Azuro/azuro-italic.woff");
+	font-style: italic;
+}
+@font-face {
+	font-family: Azuro;
+	src: url("Azuro/azuro-bold.eot?ie"),
+	url("Azuro/azuro-bold.woff");
+	font-weight: bold;
+}
+@font-face {
+	font-family: Azuro;
+	src: url("Azuro/azuro-bolditalic.eot?ie"),
+	url("Azuro/azuro-bolditalic.woff");
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+
+

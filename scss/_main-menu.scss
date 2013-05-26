@@ -1,0 +1,318 @@
+/* For the list items in the main menu */
+#groups .box-list li{
+
+	font-size: 14px;
+	text-transform: uppercase;
+	list-style: none;
+	position: relative;
+
+	a{
+		color: #fff;
+		letter-spacing: 1px;
+		display: block;
+		padding: 0.7em 0 0.7em 35px; /* Positioning of Hot, Kindling etc in main menu. */
+		background: #212429;
+
+		&:hover{
+			color: #333;
+			text-decoration: none;
+		}
+	}
+
+	/* Positioning hover icons in main menu*/
+	.btn.menu{ top: 12px; }
+
+}
+
+
+
+.box-list{
+	margin: 0;
+	padding: 0;
+}
+
+/* The groups-menu*/
+#groups-scroller-container .box-list{
+
+	/*  Positioning hover icons for groups..
+		We want it to overwrite the default positioning.
+	 */
+
+	.btn.menu{ top: 8px !important; }
+	
+
+	li a{
+		font-weight: normal;
+		font-size: 12px;
+		letter-spacing: 1px;
+		color: #fff;
+		display: block;
+		padding-left: 4.3em; /* How much indent the group-items should have*/
+
+	}
+}
+
+.saved-count{
+	color: #fff;
+	opacity: 0.3;
+}
+
+
+
+#fixed{
+	a.unread{
+
+				.unread-count{
+					display: inline;
+					color: $fever-red;
+				}
+
+				.favicon{
+					opacity: 0.8;
+				}
+
+				&:before{
+					content: "";
+					width: 6px;
+					height: 6px;
+					background: $feed-menu-link;
+					@include vendor(border-radius, 3px);
+					position: absolute;
+					margin-left: -16px;
+					top: 37%;
+				}
+
+	}
+
+	/* The groups-menu colors */
+
+
+	.droppable:nth-child(1) a.unread::before{ background: #17bc9c;}
+	.droppable:nth-child(2) a.unread::before{ background: #d45400;}
+	.droppable:nth-child(3) a.unread::before{ background: #3197dc;}
+	.droppable:nth-child(4) a.unread::before{ background: #9c58b6;}
+	.droppable:nth-child(5) a.unread::before{ background: #34495e;}
+	.droppable:nth-child(6) a.unread::before{ background: #41b39d;}
+	.droppable:nth-child(7) a.unread::before{ background: #f2c300;}
+	.droppable:nth-child(8) a.unread::before{ background: #e77f1f;}
+	.droppable:nth-child(9) a.unread::before{ background: #e94d3b;}
+	.droppable:nth-child(10) a.unread::before{ background: #1eae5e;}
+	.droppable:nth-child(11) a.unread::before{ background: #2680b9;}
+	.droppable:nth-child(12) a.unread::before{ background: #8f43ae;}
+	.droppable:nth-child(12) a.unread::before{ background: #33495e;}
+	.droppable:nth-child(12) a.unread::before{ background: #94a4a6;}
+
+	.droppable:nth-child(1) a.read::before{ border-color: #17bc9c;}
+	.droppable:nth-child(2) a.read::before{ border-color: #d45400;}
+	.droppable:nth-child(3) a.read::before{ border-color: #3197dc;}
+	.droppable:nth-child(4) a.read::before{ border-color: #9c58b6;}
+	.droppable:nth-child(5) a.read::before{ border-color: #34495e;}
+	.droppable:nth-child(6) a.read::before{ border-color: #41b39d;}
+	.droppable:nth-child(7) a.read::before{ border-color: #f2c300;}
+	.droppable:nth-child(8) a.read::before{ border-color: #e77f1f;}
+	.droppable:nth-child(9) a.read::before{ border-color: #e94d3b;}
+	.droppable:nth-child(10) a.read::before{ border-color: #1eae5e;}
+	.droppable:nth-child(11) a.read::before{ border-color: #2680b9;}
+	.droppable:nth-child(12) a.read::before{ border-color: #8f43ae;}
+	.droppable:nth-child(12) a.read::before{ border-color: #33495e;}
+	.droppable:nth-child(12) a.read::before{ border-color: #94a4a6;}
+
+
+
+
+	a.read{
+
+		&:before{
+			content: "";
+			width: 4px;
+			height: 4px;
+			@include vendor(border-radius, 3px);
+			border: 1px solid $feed-menu-link;
+			position: absolute;
+			margin-left: -16px;
+			top: 37%;
+			background: none;
+		}
+	}
+
+}
+
+
+
+
+
+/*Status */
+#status{
+	position: fixed;
+	bottom: 45px;
+	border-top: 1px solid $feed-menu-bg;
+	left: 0;
+	width: 250px;
+	padding-top: 14px;
+	padding-left: 13px;
+	font-size: 12px;
+	overflow: hidden;
+	color: $feed-menu-link;
+}
+
+#refreshing {
+display: none;
+}
+
+
+/* thermometer ol */
+
+
+.thermometer {
+position: fixed;
+top: 0;
+left: 0;
+width: 4px;
+height: 100%;
+background: $main-menu-bg;
+z-index: 5;
+}
+
+.thermometer .groove {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+width: 4px;
+}
+
+#mercury {
+max-height: 100%;
+position: absolute;
+left: 0;
+bottom: 0;
+width: 4px;
+background: #A10 url(images/bg-mercury.gif) 0 0 repeat;
+border: none;
+}
+
+.fluid #mercury .label {
+right: auto;
+left: 10px;
+color: #FFF;
+background-color: #333;
+}
+
+#mercury .label {
+display: none;
+text-align: right;
+white-space: nowrap;
+position: absolute;
+z-index: 4;
+top: -2px;
+right: 10px;
+padding: 0 4px;
+border: none;
+opacity: 0.9;
+background-color: #DDD;
+}
+
+.fluid #mercury .label {
+color: #FFF;
+}
+#mercury .label {
+text-align: right;
+white-space: nowrap;
+}
+
+.thermometer u {
+top: 0;
+bottom: 7px;
+}
+
+.thermometer b {
+height: 7px;
+bottom: 0;
+background-position: 0 100%;
+}
+
+.thermometer u, .thermometer b {
+position: absolute;
+left: 0;
+display: block;
+width: 10px;
+//background: url(images/bg-thermometer.png) 0 0 no-repeat;
+}
+
+
+
+#refreshing {
+
+	.btn{
+	position: absolute;
+	right: 24px;
+	top: 16%;
+	}
+
+	.favicon, .icon{
+		margin-left: 0px;
+		margin-top: -1px;
+	}
+
+	strong{
+		display: block;
+		margin-top: 5px;
+	}
+}
+
+#refreshed {
+	.btn.refresh {
+	display: block;
+	float: left;
+	margin-bottom: 16px;
+	}
+
+	.content{
+		padding-right: 10px;
+	}
+}
+
+#remove {
+display: none;
+}
+
+.btn.cancel.search {
+display: block;
+left: 164px;
+width: 16px;
+cursor: default;
+position: absolute;
+top: 12px;
+opacity: 0;
+@include vendor(transition, all 0.2s ease-in-out );
+@include rotate(-30deg);
+}
+
+.btn.cancel.search.clear {
+opacity: 1;
+cursor: pointer;
+@include rotate(0deg);
+}
+
+.search.q {
+left: 22px;
+padding: 0 0 0 12px;
+position: absolute;
+top: 7px;
+
+
+	input{
+	@include vendor(border-radius, 4px);
+	border: none;
+	padding: 4px;
+	background: #232a32;
+	@include vendor(transition, background 0.2s ease-in-out );
+
+	&:focus{
+		outline: 0;
+		background: white;
+	}
+
+	}
+}
+

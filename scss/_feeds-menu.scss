@@ -1,0 +1,65 @@
+#feeds .box-list{
+	margin: 0;
+	padding: 0;
+
+	
+
+
+}
+
+#feeds-scroller-container{
+	.icon, .favicon{
+			display: none ;
+			//to not show the fevicon in feeds-display
+		}	
+}
+
+
+
+#feeds .box-list li{
+	list-style: none;
+	position: relative;
+	overflow: hidden;
+
+	&.has-focus a, a:hover{
+		.favicon{opacity: 1 !important;}	
+	}
+
+	a:hover{
+		// background: #f2f2f2 !important;
+		// color: #444 !important;
+		text-decoration: none;
+	}
+
+	a{
+		font-weight: normal;
+		font-size: 12px;
+		letter-spacing: 1px;
+		color: $feed-menu-link;
+		text-transform: uppercase;
+		line-height: 20px;
+		display: block;
+		padding-left: 48px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		width: 100%;
+	}
+
+	.abandoned{
+		//opacity: 0.1;
+		//color: #212429;
+		color: darken($feed-menu-link, 30%);
+		&:before{
+			display: none !important;
+		}
+	}
+
+}
+
+
+#feed-0{
+	background: $main-menu-bg;
+	.btn{
+		display: block;
+	}
+}

@@ -1,0 +1,22 @@
+body{
+	font-family: $main-fontstack;
+}
+
+#content-container .item-content {
+	font-family: $fontstack-in-feed-content;
+}
+
+b{
+	font-weight: bold;
+}
+
+i, em{
+	font-style: italic;
+}
+
+
+blockquote, q{
+	font-style: italic;
+	color: #366290;
+	margin: 0 0 2em 2em;
+}

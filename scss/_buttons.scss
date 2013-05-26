@@ -1,0 +1,237 @@
+/* buttons */
+button
+{
+	display: inline-block;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.btn
+{
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-indent: -9999px;
+	cursor: pointer;
+	background-position: 0 0;
+}
+
+.btn.text
+{
+	position: relative;
+	text-indent: 0;
+	text-transform: lowercase;
+	font-weight: normal;
+	width: auto;
+	color: #FFF;
+	padding: 0 0 0 8px;
+	margin: 0 8px 0 0;
+}
+
+.btn.text i
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -8px;
+	width: 8px;
+	height: 16px;
+	background-position: 100% 0;
+}
+
+.btn.menu
+{
+	width: 28px;
+}
+
+.btn.menu.text
+{
+	padding: 0 0 0 6px;
+	margin: 0 15px 0 0;
+	width: auto;
+}
+
+.btn.menu.text i
+{
+	width: 15px;
+	right: -15px;
+}
+
+.btn.default
+{
+	background-position: 0 -32px;
+}
+
+.btn.default i
+{
+	background-position: 100% -32px;
+}
+
+.btn{
+	opacity: 0.8;
+}
+
+.btn:hover
+{
+	opacity: 1;
+}
+
+.btn:hover i
+{
+	background-position: 100% -16px;
+}
+
+.btn.text,
+.btn.text i		{ background-image: url(images/btn-text.png); }
+.btn.help 		{ background-image: url(images/btn-help.png); }
+.btn.refresh	{
+	background-image: url(icons.svg);
+	background-position: -50px -74px;
+ }
+
+ #feeds .btn.refresh{
+ 	background-position: -14px -74px;
+ }
+
+.btn.cancel {
+	background-image: url(icons.svg);
+	background-position: 34px -215px;
+}
+.btn.add		{ background-image: url(images/btn-add.png); }
+.btn.text.feed	{ background-image: url(images/btn-text-feed.png); }
+
+.btn.menu.text,
+.btn.menu.text i	{ background-image: url(images/btn-menu-text.png); }
+.btn.menu.action	{ 
+	background-image: url(icons.svg);
+	background-position: -43px -154px;  }
+
+.btn.menu.group		{ 
+	background-image: url(icons.svg);
+	background-position: -43px -115px; 
+}
+
+.btn.menu.feed {
+background-image: url(icons.svg);
+background-position: -13px -133px;
+}
+
+.btn.menu.item {
+background-image: url(icons.svg);
+background-position: -4px -95px;
+}
+
+.btn.text.feed
+{
+	padding-left: 16px;
+}
+
+.btn.help
+{
+	position: relative;
+	top: -2px;
+}
+
+
+
+/* Remove default logo and show new logo */
+#fever{
+		background-image: url(icons.svg);
+		background-position: 0px 6px;
+		background-repeat: no-repeat;
+
+		#logo{
+		display: none; /* Remove default logo */
+		}
+}
+
+button[disabled] .btn
+{
+	cursor: default;
+	background-position: 0 0 !important;
+}
+
+button[disabled] .btn i
+{
+	cursor: default;
+	background-position: 100% 0 !important;
+}
+
+.box-list .btn,
+.item .meta .btn,
+.link .meta .btn
+{
+	display: none;
+}
+
+.box-list #section-0:hover .btn,
+.box-list li:hover > .btn,
+.item:hover .meta .btn,
+.link:hover .meta .btn
+{
+	display: inline-block;
+}
+
+.box-list a:hover
+{
+	color: #333;
+}
+
+.box-list .help
+{
+	// display: block;
+	// position: absolute;
+	// top: 7px;
+	// right: 7px;
+	display: none !important;
+}
+
+.box-list .refresh
+{
+	position: absolute;
+	top: 7px;
+	right: 10px;
+}
+
+.item .meta .btn.menu{
+	position: absolute;
+	bottom: 7px;
+	right: 10px;
+}
+
+.item .meta h2 .btn.menu {
+	position: static;
+	margin: 0px 0 0 4px;
+}
+
+.box-list .btn.menu
+{
+	position: absolute;
+	top: 8px;
+	right: 25px;
+}
+
+.btn.file input
+{
+	position: absolute;
+	display: inline;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.btn-row
+{
+	vertical-align: middle;
+	text-align: right;
+	white-space: nowrap;
+}

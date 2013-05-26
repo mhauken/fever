@@ -1,0 +1,119 @@
+/* icons & favicons */
+i.icon,
+i.favicon,
+i.favicon i
+{
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+}
+
+i.favicon i
+{
+	-moz-background-size: 16px;
+	-webkit-background-size: 16px;
+	background-repeat: no-repeat;
+}
+
+
+
+.box-list .icon,
+.box-list .favicon,
+.source-list .favicon,
+.item .meta .favicon,
+.status .favicon,
+#dragger .favicon
+{
+	//background: url(images/bg-favicon.png) 0 0 no-repeat;
+	padding: 0;
+	top: 7px;
+	left: 7px;
+	margin-left: -26px;
+	margin-right: 7px;
+	margin-top: -3px;
+}
+
+.inline-feed .favicon{
+	margin-left: 5px;
+}
+
+.box-list .favicon.icon,
+.source-list .favicon.icon,
+.item .meta .favicon.icon,
+.status .favicon.icon,
+#dragger .favicon.icon
+{
+	background-image: url(images/icon-favicon.png);
+	padding: 0;
+	top: 7px;
+	left: 7px;
+}
+
+
+
+.box-list .favicon.icon.locked,
+.source-list .favicon.icon.locked,
+.item .meta .favicon.icon.locked,
+.status .favicon.icon.locked,
+#dragger .favicon.icon.locked
+{
+	background-image: url(images/icon-favicon-locked.png);
+}
+
+li.has-focus .favicon.icon,/*
+.item.has-focus .favicon.icon,*/
+.source-list.has-focus .favicon.icon,
+#dragger  .favicon.icon
+{
+	background-position: 0 -16px;
+}
+
+
+
+
+.box-list .icon, .box-list .favicon, .source-list .favicon, .item .meta .favicon, .status .favicon, #dragger .favicon {
+padding: 3px;
+top: 4px;
+left: 4px;
+}
+
+
+/*Positioning of the icons in main menu..*/
+#groups-container .icon{
+	margin: 0 3px 0 -24px;
+}
+
+.icon{
+
+	&.hot {
+		background-image: url(icons.svg);
+		background-position: -47px -236px;
+		margin-top: -2px !important;
+		}
+
+	&.kindling	{ 
+		background-image: url(icons.svg);
+		background-position: -47px -303px;
+		}
+	&.saved {
+		background-image: url(icons.svg);
+		background-position: -47px -283px;
+		}
+	&.spark {
+		background-image: url(icons.svg);
+		background-position: -47px -258px;
+		margin-top: -3px !important;
+		}
+	&.search {
+		background-image: url(icons.svg);
+		background-position: -46px -325px;
+		}
+
+}
+
+
+// .icon.saved		{ background-image: url(images/icon-saved.png); }
+//.icon.search	{ background-image: url(images/icon-search.png); }
+// .icon.unread	{ background-image: url(images/icon-unread.png); }
+// .icon.trash		{ background-image: url(images/icon-trash.png); }

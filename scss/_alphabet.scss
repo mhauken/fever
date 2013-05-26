@@ -1,0 +1,75 @@
+#feeds-alpha
+{
+	display: block; /* Change to display:none; if you're having problems with the navigation showing all the time*/
+	z-index: 1;
+	width: 24px;
+	
+	position: absolute;
+	top: 0px;
+	text-align: center;
+
+	height: 100%;
+	//background: #2c3e50; /*Blue*/
+	background: #c0382a; /*Red*/
+	//background: #2a99d6; /*Light blue*/
+	
+	padding: 0;
+	margin: 0 0 0 0;
+	@include transform(-24px, 0);
+}
+
+#feeds-container:hover #feeds-alpha
+{
+	display: block;
+	@include transform(0, 0);
+}
+
+#feeds-alpha li
+{
+	color: darken(#c0382a, 10%);
+	font-weight: normal;
+	line-height: 22px;
+	//background: url(../styles/images/bg-alpha.png) 0 50% no-repeat;
+	list-style: none;
+	font-size: 12px;
+}
+
+#feeds-alpha li a
+{
+	display: block;
+	color: lighten(#c0382a, 40%);
+	font-weight: normal;
+
+}
+
+#feeds-alpha li a.cancel
+{
+	display: inline-block;
+}
+
+#feeds-alpha li:first-child
+{
+	background-position: 0 0;
+	padding: 0 0 3px;
+}
+
+#feeds-alpha li:last-child
+{
+	background-position: 0 100%;
+}
+
+#feeds-alpha li:nth-child(even)
+{
+	background-position: -24px 50%;
+}
+
+#feeds-alpha li:nth-child(even):last-child
+{
+	background-position: -24px 100%;
+}
+
+#feeds-alpha li:hover,
+#feeds-alpha li:last-child:hover
+{
+	background-position-x: -48px;
+}

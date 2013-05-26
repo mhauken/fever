@@ -1,0 +1,199 @@
+#content-container{
+
+	.item:first-child{
+		h1{
+			padding-top: 50px;
+		}
+	}
+
+	//margin-top: -39px;
+
+	//max-width: 750px;
+	//border-right: 1px solid #d7d7d7;
+
+	/* for desktop */
+
+	.content{
+		margin-bottom: -15px;
+	}
+
+	.unread{
+		.meta h2{
+			position: relative;
+			
+			&:before{
+				content: "";
+				position: absolute;
+				top: 30%;
+			    left: 0;
+			    width: 12px;
+			    height: 12px;
+			   	background: #d0d7db;
+			    margin-left: 17px;
+			    @include vendor(border-radius, 6px);
+			}
+
+		}
+
+	}
+
+	.read{
+		.meta h2{
+			position: relative;
+			
+			&:before{
+				content: "";
+				position: absolute;
+				top: 30%;
+			    left: 0;
+			    width: 10px;
+			    height: 10px;
+			   	border: 2px solid #d0d7db;
+			    margin-left: 17px;
+			    @include vendor(border-radius, 7px);
+			}
+
+		}
+
+	}
+
+
+	.saved{
+		.meta h2{
+			position: relative;
+			
+			
+
+			&:before,&:after {
+			    content: "";
+			    position: absolute;
+			    top: 30%;
+			    left: 0;
+			    width: 6px;
+			    height: 6px;
+			    border: 3px solid #f2c400;
+			    margin-left: 14px;
+			    @include vendor(border-radius, 10px 10px 0 10px);
+			    -webkit-transform: rotate(-45deg);
+			       -moz-transform: rotate(-45deg);
+			        -ms-transform: rotate(-45deg);
+			         -o-transform: rotate(-45deg);
+			            transform: rotate(-45deg);
+			}
+
+			&:after {
+			    left: 13px;
+			    right: 0;
+			    @include vendor(border-radius, 10px 10px 10px 0);
+			    -webkit-transform: rotate(45deg);
+			       -moz-transform: rotate(45deg);
+			        -ms-transform: rotate(45deg);
+			         -o-transform: rotate(45deg);
+			            transform: rotate(45deg);
+			}
+		}
+	}
+
+	.meta{
+
+	//border-bottom: 1px solid #d7d7d7;
+	position: relative;
+	
+	
+
+		.favicon{
+		display: none;
+		}
+	
+	/*Heading*/
+		h1{
+			text-transform: uppercase;
+			padding-left: 50px;
+			line-height: 1.3em;
+			margin: 0 0 0;
+			padding-top: 25px;
+			padding-bottom: 22px;
+			padding-right: 30px;
+			background: #fff;
+			max-width: 750px;
+			a{
+				color: #444;
+			}
+
+			a:hover{
+				text-decoration: none;
+				color: $fever-red;
+			}
+		}
+
+
+		h2{
+			font-size: 12px;
+			padding-left: 50px;
+			margin: 0;
+			font-weight: normal;
+			line-height: 2.5em;
+			color: #bdc2c7;
+			width: 100%;
+			-webkit-font-smoothing: antialiased;
+			-moz-font-smoothing: antialiased;
+			-ms-font-smoothing: antialiased;
+			-o-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+			a{color: #94a5a6;}
+
+		}
+	}
+
+
+	.content{
+		background: #fff;
+		position: relative;
+		
+	}
+
+
+	.item-content{
+		padding-top: 2em;
+		padding-left: 50px;
+		padding-bottom: 80px;
+		margin-bottom: -10px;
+		max-width: 670px;
+		line-height: 1.6em;
+		padding-right: 20px;
+		position: relative;
+		
+
+		img{
+			margin-bottom: 25px !important;
+			display: block;
+			margin-top: 20px;
+		}
+
+		a{word-wrap: break-word;}
+
+		/* To add fade when contracted */
+		&:before{
+			content: "";
+			background: -moz-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(255,255,255,1) 43%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.2)), color-stop(43%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, rgba(255,255,255,0.2) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 100%); /* IE10+ */
+			background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 100%); /* W3C */
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: block;
+		}
+	}
+
+	/*To remove fade when expanded*/
+	.full .item-content{
+		&:before{
+			display: none !important;  /*We never want to see this when expanded*/
+		}
+	}
+
+	
+}

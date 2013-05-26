@@ -1,0 +1,30 @@
+// @-webkit-keyframes pulse {
+//     0% { -webkit-transform: translate(0,0); }	
+//     30% { -webkit-transform: translate(-10px,0); }
+//     100% { -webkit-transform: translate(0,0); }
+// }
+// @-moz-keyframes pulse {
+//     0% { -moz-transform: translate(0,0); }	
+// 	30% { -moz-transform: translate(-10px,0); }
+//     100% { -moz-transform: translate(0,0); }
+// }
+// @-o-keyframes pulse {
+//     0% { -o-transform: translate(0,0); }	
+// 	30% { -o-transform: translate(-10px,0); }
+//     100% { -o-transform: translate(0,0); }
+// }
+// @keyframes pulse {
+//     0% { transform: translate(0,0); }	
+// 	30% { transform: translate(-10px,0); }
+//     100% { transform: translate(0,0); }
+// }
+
+
+/* Subtle animation on the menu-items background*/
+#groups .box-list li a, #feeds .box-list li a{
+@include vendor(transition, background 0.2s ease-in-out );
+}
+
+#feeds-alpha{
+    @include vendor(transition, all 0.2s ease-in-out );
+}

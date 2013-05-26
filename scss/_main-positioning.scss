@@ -1,0 +1,208 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* wrapper for menus */
+#fixed{
+	min-width: 250px;
+	max-width: 500px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+
+/* Main menu*/
+#groups-container{
+	height: 100%;
+	width: 250px;
+	padding-right: 0;
+	padding-left: 0px;
+	padding-top: 30px;
+	z-index: 10;
+	background: $main-menu-bg;
+	@include font-smoothing(antialiased);
+}
+
+/* Feed menu*/
+#feeds-container{
+	@include vendor(transition, all 0.5s ease-in-out );
+	@include transform(-250px, 0);
+	z-index: -4;
+	left: 250px;
+	width: 250px;
+	//border-right: 1px solid #d7d7d7;
+	display: block;
+	position: absolute;
+	height: 100%;
+	background: $feed-menu-bg;
+	@include font-smoothing(antialiased);
+	top: 0;
+
+}
+
+/* Where the content is*/
+
+body > .container{
+	margin-left: 250px;
+	@include vendor(transition, all 0.5s ease-in-out );
+	 
+	display: block;
+	overflow: hidden; /* to fix double scrollbar */
+	position: relative;
+	min-width: 300px;
+}
+
+
+/* When you want to see the feeds:*/
+.show-feeds{
+	> .container{
+		margin-left: 500px;
+	}
+
+	#feeds-container{
+	@include transform(0,0);
+	}
+
+
+
+	/* Not to show feeds on hot.. */
+	&.hot > .container{
+		margin-left: 250px;
+	}
+
+	&.hot #feeds-container{
+		@include transform(-250px, 0);
+	}
+
+}
+
+/* There is a .container inside #fixed as well which we don't want affected*/
+#fixed .container{
+	width: 100%;
+	left: 0;
+	height: 100%;
+}
+
+#fluid{
+	height: 100%;
+}
+
+
+#feeds, #feeds .content, #feeds-scroller-container{
+	height: 100%;
+}
+
+#fever{
+	position: fixed;
+	bottom: 0;
+	width: 250px;
+	height: 35px;
+	border-top: 1px solid $feed-menu-bg;
+	padding-top: 7px;
+	padding-left: 10px;
+
+	.btn{
+		position: absolute;
+		right: 24px;
+	}
+}
+
+#hot-options{
+	position: absolute;
+	right: 0;
+}
+
+#section-0{
+	position: relative;
+}
+
+#groups-scroller-container, #feeds-scroller-container {
+overflow: hidden;
+}
+
+.scrollable #groups-scroller, .scrollable #feeds-scroller {
+overflow-y: auto;
+overflow-x: hidden;
+
+}
+
+.scrollable #feeds-scroller{
+	/*so that the scroll goes down to the bottom*/
+	/*We want !important to overwrite the javascript*/
+	max-height: 100% !important;
+}
+
+
+.content {
+position: relative;
+z-index: 1;
+}
+
+div.box {
+position: relative;
+}
+
+
+dd{
+	margin: 0;
+}
+
+
+#feeds{
+	.has-focus{
+	background: #fff;
+
+		a{
+		color: $feeds-read-indication !important;
+		}
+		a.read{
+			&:before{
+				border-color: $feeds-read-indication;
+			}
+		}
+		a.unread{
+			&:before{
+				background: $feeds-read-indication;
+			}
+		}
+	}
+
+	.box-list li:hover{
+		background: #fff !important;
+		color: $feeds-read-indication !important;
+		//same as has-focus
+	}
+
+	.box-list li a:hover{
+
+		&.read{
+			&:before{
+				border-color: $feeds-read-indication;
+			}
+		}
+		&.unread{
+			&:before{
+				background: $feeds-read-indication;
+			}
+		}
+	}
+}
+
+#groups{
+	.box-list li a:hover, .has-focus a{
+		background: $feed-menu-bg !important;
+		color: #fff !important;
+	}
+}
+
+
+
+
+/* To not display read/unread on Kindling */
+#group-0 a::before{ display: none;}
+
+
+/* If want no unread-count*/
+.hide-unread .unread-count{
+	display: none !important;
+}
+

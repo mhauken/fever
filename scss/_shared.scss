@@ -1,0 +1,459 @@
+html
+{
+	min-height: 100%;
+	margin-bottom: 1px;
+}
+
+body
+{
+	background: #fff;
+	padding: 0;
+	color: #333;
+	font-family: Helvetica, Arial, sans-serif;
+	min-height: 100%;
+	margin: 0;
+}
+
+a
+{
+	text-decoration: none;
+	color: $fever-red;
+	cursor: pointer;
+}
+
+a:hover
+{
+	color: darken($fever-red, 20%);
+	text-decoration: underline;
+}
+
+code,
+pre
+{
+	background-color: #E8E8E8;
+	opacity: 0.75;
+	font: 10px/14px Monaco, monospace;
+}
+
+pre
+{
+	padding: 8px;
+	overflow: auto;
+}
+
+
+img, object{
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+
+/* forms */
+form
+{
+	padding: 0 0 3px;
+}
+
+form table
+{
+	width: 100%;
+}
+
+th.proto
+{
+	white-space: nowrap;
+}
+
+td.proto
+{
+	width: 100%;
+}
+
+form tr > *
+{
+	padding: 8px 10px 5px 0;
+	background: url(images/bg-form-divider.png) 50% 0 no-repeat;
+}
+
+fieldset table:first-child tr:first-child > *
+{
+	background-image: none;
+}
+
+form tr > *:first-child
+{
+	padding-left: 15px;
+	background-position: 0 0;
+}
+
+form tr > *:last-child
+{
+	padding-right: 15px;
+	background-position: 100% 0;
+}
+
+.dialog form tr > *:first-child
+{
+	padding-left: 5px;
+}
+
+.dialog form tr > *:last-child
+{
+	padding-right: 5px;
+}
+
+form select[multiple]
+{
+/*	max-height: 144px;*/
+}
+
+#service-template
+{
+	display: none;
+}
+
+table.embedded th
+{
+	padding: 4px 0 0;
+}
+
+table.embedded th strong
+{
+	display: block;
+	position: relative;
+	top: 2px;
+	left: 0;
+	
+	background: url(images/bg-form-header.png) 50% 100% no-repeat;
+	font-size: 9px;
+	line-height: 26px;
+	height: 26px;
+	padding: 0 10px 0 0;
+}
+
+table.embedded th:first-child,
+table.embedded th.key
+{
+	width: 1%;
+	white-space: nowrap;
+}
+
+td.key span.w
+{
+	width: 20px;
+}
+
+td.key span.w input
+{
+	text-align: center;
+}
+
+table.embedded th:first-child strong
+{
+	background-position: 0 100%;
+	padding-left: 4px;
+}
+
+table.embedded th:last-child strong
+{
+	background-position: 100% 100%;
+	padding-right: 0;
+}
+
+table.embedded td:last-child
+{
+	padding-right: 0;
+}
+
+table.embedded th strong .btn.add
+{
+	position: relative;
+	top: 5px;
+}
+
+/* inputs */
+span.w,
+span.i
+{
+	display: block;
+	background-color: #FFF;
+	padding: 1px;
+}
+
+span.i
+{
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+span.w input[type=text],
+span.w input[type=email],
+span.w input[type=password],
+span.w select,
+span.w textarea
+{
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input:focus,
+select[multiple]:focus,
+textarea:focus
+{
+	background-color: #ffc;
+}
+
+select:focus,
+input[type=checkbox]:focus,
+input[type=radio]:focus
+{
+	outline: 1px solid #ffc;
+}
+
+
+/* menu */
+#menu-container
+{
+	display: none;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#menu
+{
+	position: fixed;
+	z-index: 1000;
+	//margin-left: -196px;
+	margin-top: 25px;
+	border-radius: 0;
+	font-size: 13px;
+	border: 0;
+	@include vendor(box-shadow, 0 0 10px rgba(0,0,0,0.2));
+}
+
+#menu-options
+{
+	position: relative;
+	z-index: 1;
+	color: #fff;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	border-radius: 0;
+	background: $main-menu-bg;
+	padding-top: 1px;
+	padding-bottom: 2px;
+}
+
+#menu-options li
+{
+	position: relative;
+	line-height: 16px;
+	padding: 6px 48px 5px 18px;
+	cursor: pointer;
+	white-space: nowrap;
+	list-style: none;
+	//width: 250px;
+	//border-radius: 0;
+}
+
+#menu-options li span.key
+{
+	position: absolute;
+	top: 6px;
+	right: 12px;
+	text-transform: uppercase;
+}
+
+#menu-options li span.key.shift {
+padding: 0 0 0 18px;
+background: url(icons.svg);
+background-position: -43px -175px;
+}
+
+#menu-options li.selected
+{
+	background: url(icons.svg);
+	background-position: -46px -187px;
+	background-repeat: no-repeat;
+}
+
+#menu-options li.disabled
+{
+	color: lighten($feed-menu-bg, 10%) !important;
+	background-color: #000 !important;
+	cursor: default;
+	opacity: 0.5;
+}
+
+#menu-options li.selected.disabled:hover
+{
+	background-position: 2px 5;
+}
+
+#menu-options li:hover,
+#menu-options li:hover span.key.shift
+{
+	color: #FFF;
+	background-color: $fever-red;
+}
+
+#menu-options li.divider
+{
+	margin: 0;
+	border-bottom: 1px solid $feed-menu-bg;
+	padding: 0;
+}
+
+// #menu-shadow
+// {
+// 	position: absolute;
+// 	top: 	-1px;
+// 	left: 	-1px;
+// 	right: 	-1px;
+// 	bottom: -1px;
+// 	background-color: #000;
+// 	opacity: .1;
+// 	border: none;
+// 	-webkit-border-radius: 5px;
+// 	-moz-border-radius: 5px;
+// }
+
+
+
+
+
+/* dragger */
+#dragger
+{
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	cursor: move;
+	opacity: 0.6;
+	
+	background-color: #333;
+	color: #FFF;
+	line-height: 30px;
+	padding: 0 5px 0 30px;
+	
+	border: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+#dragger em
+{
+	display: none;
+}
+
+/* iframe - what does this do? Do we need it */
+#refresh
+{
+	display: none; /* For now.. */
+	z-index: 4;
+	position: fixed;
+//	bottom: 0;
+	/*to remove from bottom of screen*/
+	bottom: -4px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 0;
+
+}
+
+/* errors */
+ul.errors
+{
+	margin: 18px 0;
+}
+
+ul.errors li 
+{
+	padding-left: 22px !important;
+	background: url(images/bg-error.png) 0 1px no-repeat !important;
+}
+
+/* debug */
+#debug
+{
+	display: block;
+	z-index: 1000;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#debug-clear
+{
+	z-index: 1001;
+	position: absolute;
+	top: 8px;
+	right: 24px;
+}
+
+#debug-filter
+{
+	z-index: 1001;
+	position: absolute;
+	top: 8px;
+	right: 76px;
+}
+
+#debug ul
+{
+	height: 300px;
+	overflow: auto;
+
+	border-top: 2px solid #222;
+	background-color: #333;
+	color: #fff;
+}
+
+#debug pre,
+#debug code
+{
+	background-color: transparent;
+}
+
+#debug li
+{
+	display: block;
+	padding: 4px 8px;
+}
+
+#debug li:nth-child(even)
+{
+	background-color: rgba(0,0,0,0.2);
+	border-top: 2px solid rgba(0,0,0,0.2);
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+#debug li.debug-restart
+{
+	background-color: #a10;
+}
+
+
+#debug li em
+{
+	font-weight: bold;
+	font-style: normal;
+}
+
+#null
+{
+	display: none;
+}

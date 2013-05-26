@@ -1,0 +1,80 @@
+/* for iPad only (ideally) */
+@media only screen and (device-width: 768px)
+{
+	/* prevent iPad MobileSafari from requiring two taps in lists */
+	.box-list #section-0:hover .btn,
+	.box-list li:hover > .btn,
+	.item:hover .meta .btn,
+	.link:hover .meta .btn
+	{
+		display: none;
+	}
+	.box-list #section-0.has-focus .btn,
+	.box-list li.has-focus > .btn,
+	.item.has-focus .meta .btn,
+	.link.has-focus .meta .btn
+	{
+		display: inline-block;
+	}
+	
+	/* prevents iPad MobileSafari from requiring two taps for menus, don't ask me how */
+	.btn:hover
+	{
+		border: 1px solid rgba(0,0,0,0);
+	}
+	
+	/* help is all kinds of wonky, fixed position isn't really supported and some events aren't firing so hide for now */
+	#help-container,
+	#help,
+	#help-dangle
+	{
+		display: none !important;
+	}
+}
+
+/* for Safari only */
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+	body
+	{
+		-webkit-text-size-adjust: none;
+	}
+	
+	.btn
+	{
+		line-height: 15px;
+	}
+	
+	.btn.file input
+	{
+		left: 0; /* fubar in FF */
+	}
+	
+	.item-content
+	{
+		-webkit-text-size-adjust: auto;
+	}
+}
+
+/* for Opera only */
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0)
+{
+	head~body .btn
+	{
+		line-height: 18px;
+	}
+	
+	head~body #help
+	{
+		opacity: 1;
+	}
+}
+
+/* for MobileSafari only */
+@media only screen and (max-device-width: 480px)
+{
+	.btn.text i
+	{
+		right: -16px;
+	}
+}

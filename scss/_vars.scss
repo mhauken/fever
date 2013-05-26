@@ -1,0 +1,36 @@
+@mixin font-smoothing($value){
+	-webkit-font-smoothing: $value;
+	-moz-font-smoothing: $value;
+	-ms-font-smoothing: $value;
+	-o-font-smoothing: $value;
+	font-smoothing: $value;
+}
+
+@mixin vendor($property, $value){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+@mixin transform($value1, $value2){
+	-webkit-transform: translate($value1, $value2);
+    -moz-transform: translate($value1, $value2);
+    -o-transform: translate($value1, $value2);
+    -ms-transform: translate($value1, $value2);
+}
+
+@mixin rotate($rotation){
+	-ms-transform:rotate($rotation); /* IE 9 */
+	-webkit-transform:rotate($rotation); /* Safari and Chrome */
+	transform:rotate($rotation);
+}
+
+@mixin animation-duration($value1){
+-webkit-animation-duration:$value1;
+-moz-animation-duration:$value1;
+-ms-animation-duration:$value1;
+-o-animation-duration:$value1;
+animation-duration:$value1;
+}
