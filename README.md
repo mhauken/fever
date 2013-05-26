@@ -24,3 +24,4 @@ If you want to tweak the design even more to your preferences I recommend you st
 * Fix Hot-list menu-item
 * Clean up and sort the scss more.
 
+Made by [Marius Hauken](https://twitter.com/mhauken)
