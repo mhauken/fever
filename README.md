@@ -20,7 +20,7 @@ If you want to tweak the design even more to your preferences I recommend you st
 ## To do-list:
 * Fix scrolling in Safari/Firefox
 * Fix icons for retina (currently the icons are tweaked for non-retina and therefore looks weird on retina-displays)
-* Clean up in the look in Hot-list
+* Clean up the look of the Hot-list
 * Fix Hot-list menu-item
 * Clean up and sort the scss more.
 
